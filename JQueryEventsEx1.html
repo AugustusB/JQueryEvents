@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Query Events Example</title>
+    <link rel="stylesheet" href="script\EventsEx1.css">
+    <script type="text/javascript" src="..\jquery-2.1.1.js"></script>
+    <script src="script\EventsEx1.js"></script>
+    <script>
+    $(function(){
+        //var domChange = new Gus.ExJqDom.DomWork();
+        var ev = new Gus.ExJqEvents.JQEvents();
+        ev.createClick('#SubmitButton', '#FirstNameTextBox', '#LastNameTextBox');
+        ev.changeFired('.MyInputs');
+        // ev.mouseIn('tr');
+        // ev.mouseOut('tr');
+        ev.onUsage('tr');
+    });
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <table style="width:300px;" id="DataTable1">
+            <tr>
+                <td style="width:30%;">First Name</td>
+                <td style="width:70%;"><input id="FirstNameTextBox" value="John" type="text"  /></td>
+            </tr>   
+            <tr>
+                <td>Last Name</td>
+                <td><input id="LastNameTextBox" type="text" class="MyInputs"/></td>
+            </tr>
+            <tr>
+                <td>Comments</td>
+                <td><textarea rows="5" cols="60" id="CommentsTextBox" class="MyInputs">TextArea</textarea></td>
+            </tr>           
+            <tr>
+                <td>
+                <select id="sel"  class="MyInputs">
+                    <option value="AZ">AZ</option>
+                    <option value="CA" selected="true">CA</option>
+                </select></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><input id="SubmitButton" type="button" value="Submit" /></td>
+                <td><div id="OutputDiv" class="myOutputDiv"></div></td>
+            </tr>
+        </table>  
+    </form>
+</body>
+</html>
