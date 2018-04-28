@@ -43,7 +43,7 @@
         },
 
         elemRemoveHighlight = function elemRemoveHighlight(findElem){
-            $(findElem).removeClass('HighLight');
+            $(findElem).('HighLight');
         },
 
         toggleHighlight = function toggleHighlight(that) {
